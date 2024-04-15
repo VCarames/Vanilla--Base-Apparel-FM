@@ -6,5 +6,79 @@
     <link rel="stylesheet" href="/dist/css/main.css" />
     <title>Base Apparel - Coming Soon</title>
   </head>
-  <body></body>
+  <body>
+    <main class="home">
+      <div class="home__logo">
+        <img src="./public/images/logo.svg" alt="Base Apparel" />
+      </div>
+      <div class="home__content">
+        <div class="home__wp">
+          <h1 class="home__wp-heading">We're <span>coming soon</span></h1>
+
+          <p class="home__wp-paragraph">
+            Hello fellow shoppers! We're currently building our new fashion
+            store. Add your email below to stay up-to-date with announcements
+            and our launch deals.
+          </p>
+
+          <form class="form" id="form" name="form" action="/" novalidate>
+            <label class="visually-hidden" for="email">Email Adress</label>
+            <input
+              class="form__input--email"
+              id="form__input--email"
+              type="email"
+              name="email"
+              aria-describedby="error-message-container"
+              placeholder="Email Address"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+              autocomplete="email"
+            />
+            <div id="error-message-container" aria-live="polite">
+              <span class="error-message" id="error-message"
+                >Enter a valid email</span
+              >
+            </div>
+            <button
+              class="form__btn"
+              id="form__btn"
+              type="submit"
+              aria-label="submit"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="20">
+                <path
+                  class="form__img--arrow"
+                  fill="none"
+                  stroke="#FFF"
+                  stroke-width="2"
+                  d="M1 1l8.836 8.836L1 18.671"
+                />
+              </svg>
+            </button>
+          </form>
+        </div>
+
+        <div aria-live="assertive">
+          <div class="home__success" id="home__success" hidden>
+            <h1 class="home__success-heading">
+              Thank you <span>& welcome!</span>
+            </h1>
+
+            <p class="home__success-paragraph">
+              Hello fellow shopper! Thank you for joining our newsletter. You
+              will be one of the first to know when we offically open and get
+              access to our exclusive deals.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <picture class="home__picture">
+        <source
+          media="(min-width: 900px)"
+          srcset="./public/images/hero-desktop.jpg"
+        />
+        <img src="./public/images/hero-mobile.jpg" alt="" />
+      </picture>
+    </main>
+  </body>
 </html>
